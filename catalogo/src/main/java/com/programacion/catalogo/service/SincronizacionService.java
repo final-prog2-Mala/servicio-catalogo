@@ -38,7 +38,6 @@ public class SincronizacionService {
 
     @Transactional
     public void ejecutarSnapshot() {
-        // 1. Descargar Snapshot completo
         SnapshotDTO snapshot = restClient.get()
                 .uri(apiUrl + "/api/synchronization/snapshot")
                 .header("Authorization", "Bearer " + apiToken)
